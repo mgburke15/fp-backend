@@ -37,7 +37,7 @@ var transport = {
     service: 'gmail',
     auth: {
         user: 'cs4241.ctrlf@gmail.com',
-        pass: 'webware123'
+        pass: ''
     }
 };
 
