@@ -26,7 +26,7 @@ console.log(creds.username);
 app.use(cors());
 
 app.get('/', function(req, res) {
-    res.send('response from server');
+    res.send('response from server \n' + cred.username + '\n' + JSON.stringify(cred.username));
 });
 
 //email credentials
