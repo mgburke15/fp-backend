@@ -14,16 +14,6 @@ const app = express();
 //package used to parse json
 app.use(bodyParser.json());
 
-/*const config = {
-    apiKey: "AIzaSyAi7Bps9iS2VQGaIxIgYq201T6zWQ93e7M",
-    authDomain: "fp-sracca.firebaseapp.com",
-    databaseURL: "https://fp-sracca.firebaseio.com",
-    projectId: "fp-sracca",
-    storageBucket: "fp-sracca.appspot.com",
-    messagingSenderId: "852845488946"
-};*/
-
-//export const fire = firebase.initializeApp(config);
 
 //express middleware- makes secure connection between frontend + backend
 app.use(cors());
@@ -53,6 +43,7 @@ transporter.verify((error, success) => {
 
 //send email
 app.post('/apply', (req, res) => {
+    var sendTo = req.body.sendTo;
     var name = req.body.name;
     var skills = req.body.skills;
     var contact = req.body.contact;
@@ -62,7 +53,7 @@ app.post('/apply', (req, res) => {
 
     var mail = {
         from: 'CTRL-F Apply',
-        to: 'madelinegburke@gmail.com',  //TODO change to poster's email
+        to: sendTo,  //TODO change to poster's email
         subject: 'Someone has applied to your posting on Ctrl-F!',
         text: content
     }
