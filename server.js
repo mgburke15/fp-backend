@@ -77,7 +77,7 @@ app.post('/apply', (req, res) => {
         if (err) {
             res.json({
                 msg: 'fail',
-                error: data
+                error: err
             })
         } else {
             res.json({
