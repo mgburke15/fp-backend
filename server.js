@@ -3,7 +3,6 @@
 //install nodeMailer
 //express send email
 
-const config = require('react-global-configuration');
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -11,7 +10,6 @@ const cors = require('cors');
 const creds = require('./config');
 
 const app = express();
-
 
 //package used to parse json
 app.use(bodyParser.json());
