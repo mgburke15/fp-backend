@@ -15,7 +15,7 @@ const app = express();
 //package used to parse json
 app.use(bodyParser.json());
 
-const creds = new aws.S({
+const creds = new aws.S3({
     username: process.env.USER,
     password: process.env.PASS
 })
