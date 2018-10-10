@@ -16,8 +16,8 @@ const app = express();
 app.use(bodyParser.json());
 
 var creds = new aws.S3({
-    username: process.env.USER,
-    password: process.env.PASS
+    username: process.env.USR,
+    password: process.env.PWD
 });
 
 console.log(creds.username);
