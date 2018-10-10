@@ -3,13 +3,15 @@
 //install nodeMailer
 //express send email
 
+const config = require('react-global-configuration');
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-//import firebase from "firebase";
+const creds = require('./config');
 
 const app = express();
+
 
 //package used to parse json
 app.use(bodyParser.json());
@@ -26,8 +28,8 @@ app.get('/', function(req, res) {
 var transport = {
     service: 'gmail',
     auth: {
-        user: 'cs4241.ctrlf@gmail.com',
-        pass: ''
+        user: creds.user,
+        pass: creds.pass
     }
 };
 
@@ -48,12 +50,21 @@ app.post('/apply', (req, res) => {
     var skills = req.body.skills;
     var contact = req.body.contact;
     var comments = req.body.comments;
-    var content = `name: ${name} \n email: ${contact} \n skills: ${skills} \n message: ${comments}`;
+    var position = req.body.position;
+    var organizer = req.body.organizer;
+    var content =
+        `Hello ${organizer},\n 
+            ${name} has applied to the ${position} position from your post on Ctrl-F. \n 
+            Here is their application: \n 
+            - Name: ${name} \n
+            - Email: ${contact} \n 
+            - Skills: ${skills} \n 
+            - Message: ${comments}`;
 
 
     var mail = {
         from: 'CTRL-F Apply',
-        to: sendTo,  //TODO change to poster's email
+        to: sendTo,
         subject: 'Someone has applied to your posting on Ctrl-F!',
         text: content
     }
