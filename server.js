@@ -7,13 +7,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-const creds = require('./config');
+//const creds = require('./config');
+const aws = require('aws-sdk');
 
 const app = express();
 
 //package used to parse json
 app.use(bodyParser.json());
 
+let creds = new aws.S({
+    username: process.env.USER,
+    password: process.env.PASS
+})
 
 //express middleware- makes secure connection between frontend + backend
 app.use(cors());
@@ -26,8 +31,8 @@ app.get('/', function(req, res) {
 var transport = {
     service: 'gmail',
     auth: {
-        user: creds.user,
-        pass: creds.pass
+        user: creds.username,
+        pass: creds.password
     }
 };
 
