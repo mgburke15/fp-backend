@@ -15,10 +15,12 @@ const app = express();
 //package used to parse json
 app.use(bodyParser.json());
 
-const creds = new aws.S3({
+var creds = new aws.S3({
     username: process.env.USER,
     password: process.env.PASS
-})
+});
+
+console.log(creds.username);
 
 //express middleware- makes secure connection between frontend + backend
 app.use(cors());

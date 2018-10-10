@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3942ab7-65fd-4658-93d3-f97ea6888755" name="Default Changelist" comment="added heroku configurations">
+    <list default="true" id="c3942ab7-65fd-4658-93d3-f97ea6888755" name="Default Changelist" comment="editting heroku creds">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
@@ -74,8 +74,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -601,7 +601,7 @@
       <workItem from="1539020214237" duration="3891000" />
       <workItem from="1539089044331" duration="7245000" />
       <workItem from="1539124951701" duration="2461000" />
-      <workItem from="1539175110753" duration="8776000" />
+      <workItem from="1539175110753" duration="9198000" />
     </task>
     <task id="LOCAL-00001" summary="edit to transport">
       <created>1539124986074</created>
@@ -652,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539199120152</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="editting heroku creds">
+      <created>1539199237955</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539199237955</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22373000" />
+    <option name="totallyTimeSpent" value="22795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="735" extended-state="0" />
@@ -705,7 +712,8 @@
     <MESSAGE value="added .gitignore" />
     <MESSAGE value="editted gitignore" />
     <MESSAGE value="added heroku configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added heroku configurations" />
+    <MESSAGE value="editting heroku creds" />
+    <option name="LAST_COMMIT_MESSAGE" value="editting heroku creds" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -785,8 +793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
         </state>
       </provider>
