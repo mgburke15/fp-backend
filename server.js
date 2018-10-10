@@ -33,8 +33,8 @@ app.get('/', function(req, res) {
 var transport = {
     service: 'gmail',
     auth: {
-        user: creds.username,
-        pass: creds.password
+        user: JSON.stringify(creds.username),
+        pass: JSON.stringify(creds.password)
     }
 };
 
