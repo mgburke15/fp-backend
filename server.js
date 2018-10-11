@@ -20,22 +20,19 @@ var creds = new aws.S3({
     password: process.env.PWD
 });
 
-console.log(creds.username);
-
 //express middleware- makes secure connection between frontend + backend
 app.use(cors());
 
 app.get('/', function(req, res) {
     res.send('response from server');
-    console.log(creds.username);
 });
 
 //email credentials
 var transport = {
     service: 'gmail',
     auth: {
-        user: JSON.stringify(creds.username),
-        pass: JSON.stringify(creds.password)
+        user: creds.username,
+        pass: creds.password
     }
 };
 
