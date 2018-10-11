@@ -7,18 +7,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-//const creds = require('./config');
-const aws = require('aws-sdk');
+const creds = require('./config');
+//const aws = require('aws-sdk');
 
 const app = express();
 
 //package used to parse json
 app.use(bodyParser.json());
 
+//getting credentials from heroku environment variables
+/*
 var creds = new aws.S3({
     username: process.env.USR,
     password: process.env.PWD
 });
+*/
 
 //express middleware- makes secure connection between frontend + backend
 app.use(cors());
@@ -31,8 +34,8 @@ app.get('/', function(req, res) {
 var transport = {
     service: 'gmail',
     auth: {
-        user: creds.username,
-        pass: creds.password
+        user: creds.user,
+        pass: creds.pass
     }
 };
 
@@ -88,4 +91,3 @@ app.post('/apply', (req, res) => {
 
 app.listen(process.env.PORT || 8080, () => console.log('Server started...'));
 
-//module.exports = app;
